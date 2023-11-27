@@ -1,3 +1,4 @@
+import { headers } from 'next/headers'
 import Link from 'next/link'
 
 async function getBlogs() {
@@ -11,15 +12,18 @@ async function getBlogs() {
 }
 
 export default async function Page() {
+  const headersList = headers()
+  const user = JSON.parse(headersList.get('user'))
   const blogs = await getBlogs()
 
   return (
     <div>
+      <div>You are: {user.email}</div>
       {
         blogs.map((blog, index) => (
           <div key={index}>
             {blog.name}
-            <Link href={`/blog/${blog.id}`}>Read more...</Link>
+            <Link href={`/manage/blog/${blog.id}`}>Edit</Link>
           </div>
         ))
       }
