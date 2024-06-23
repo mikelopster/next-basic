@@ -13,4 +13,4 @@ npm run dev # run project
 [![next-start](https://img.youtube.com/vi/e8-WmjKdfRo/0.jpg)](https://youtu.be/e8-WmjKdfRo)
 
 ### อ่านฉบับบทความได้ที่
-https://blog.mikelopster.dev/next-start/
+https://mikelopster.dev/posts/next-start/
